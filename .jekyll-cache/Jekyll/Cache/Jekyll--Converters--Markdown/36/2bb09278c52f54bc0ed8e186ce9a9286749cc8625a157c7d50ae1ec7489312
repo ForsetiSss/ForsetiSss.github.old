@@ -1,0 +1,240 @@
+I"0<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory - edit this post and re-build (or run with the <code class="language-plaintext highlighter-rouge">-w</code> switch) to see your changes!
+To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/mojombo/jekyll">Jekyll’s GitHub repo</a>.</p>
+
+<h3 id="一必要组件的安装">一、必要组件的安装</h3>
+
+<p>需要首先安装以下内容</p>
+
+<ul>
+  <li>
+    <p><strong>Ruby</strong> - 是一种面向对象、命令式、函数式、动态的通用编程语言。Windows下直接下载安装即可<a href="https://rubyinstaller.org/">Ruby installer</a>。注意，如遇报错，可能需要将安装目录（xxx\Ruby27-x64\bin）加入系统环境变量PATH。</p>
+  </li>
+  <li>
+    <p><strong>Bundler</strong> - 是一个官方推荐的Ruby gem包管理软件，可以减少Jekyll的编译错误，和环境依赖相关的bug，相关链接<a href="https://bundler.io/">Bundler</a>。只需在终端中运行以下两步：</p>
+
+    <p>1.安装bundler</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
+</code></pre></div>    </div>
+
+    <p>2.指定源</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem sources 'https://rubygems.org'
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Jekyll</strong> -相当于一个编译工具，安装好jekyll后，你可以通过jekyll创建一个网站模板从而在本地进行预览，而不用上传至Github后再进行查看，此软件包将在之后的步骤中自动安装。</p>
+  </li>
+</ul>
+
+<h3 id="二网站托管在github上创建自己的repo">二、网站托管（在Github上创建自己的repo）</h3>
+
+<p>github.io是完全基于github创建的，其本质上是在你的github账户下创建一个特殊的repo。你可以参照如下步骤完成：</p>
+
+<ul>
+  <li>
+    <p>创建repo</p>
+
+    <p>登陆你的账户后，创建一个新的repo。请务必注意该repo的名字，必须保持格式<code class="language-plaintext highlighter-rouge">&lt;username&gt;.github.io</code>，其中 `&lt;username） 替换成你的github账户名。</p>
+  </li>
+  <li>
+    <p>把repo clone到本地</p>
+
+    <p>在目录下新建一个index.html的文件,在里面输入任意内容，然后再把代码push送到github上。</p>
+  </li>
+  <li>
+    <p>测试地址</p>
+
+    <p>浏览器里访问<u>https://(username).github.io/</u>,可以发现这个url可以被访问了。</p>
+  </li>
+</ul>
+
+<p>到这里，一个免费且无限流量的Github代码托管仓库就创建完成了。</p>
+
+<h3 id="三基于jekyll模板建立网站">三、基于Jekyll模板建立网站</h3>
+
+<p>为了在发布前预览自己的网站，我们需要使用Jekyll，同时它也能为我们提供很多模板。</p>
+
+<ol>
+  <li>
+    <p>首先点击前往<a href="http://jekyllthemes.org/">jekyll 主题官网</a>。</p>
+  </li>
+  <li>
+    <p>然后选择一个自己喜欢的主题模板，比如<a href="http://jekyllthemes.org/themes/jekyll-theme-chirpy/">Chirpy</a>。</p>
+  </li>
+  <li>
+    <p>点击Download下载该模板至repo的本地目录，注意确保根目录下含有Gemfile这个文件。</p>
+
+    <p><img src="/assets/img/QQ截图20210308194033.png" /></p>
+
+    <p>注意插入图片时需要将图片文件放入assets文件夹，在md文件中由于路径不一致会无法正常显示，在网页中是正常的，无须担心。</p>
+  </li>
+  <li>
+    <p>在本地repo目录下打开命令窗口并运行</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div>    </div>
+
+    <p>自动安装所有依赖的环境</p>
+  </li>
+  <li>
+    <p>最后一步，开启测试</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div>    </div>
+
+    <p>成功运行之后，我们就可以通过http://127.0.0.1:4000/在本地访问创建的网站了。此时可以随时更改网站内容，并能实现自动实时更新。</p>
+  </li>
+</ol>
+
+<h3 id="四jekyll目录结构">四、Jekyll目录结构</h3>
+
+<p>​	Jekyll使用Ruby脚本根据模板生成静态网页，实现了内容与排版的分离。模板以嵌入<a href="https://shopify.github.io/liquid/">Liquid</a>脚本的HTML格式存放。内容为markdown或者html。为了撰写自己的博客，需要对模板内容进行修改。</p>
+
+<p>Jekyll模板通常包含的目录结构：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    _posts 博客内容
+    _pages 其他需要生成的网页，如About页
+    _layouts 网页排版模板
+    _includes 被模板包含的HTML片段，可在_config.yml中修改位置
+    assets 辅助资源 css布局 js脚本 图片等
+    _data 动态数据
+    _sites 最终生成的静态网页
+    _config.yml 网站的一些配置信息
+    index.html 网站的入口
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>我们打开根目录下的index.html可以看到：</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: home
+# Index page
+---
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>上面的home我们到_layouts目录下可以找到：</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: page
+# The Home page layout
+---
+   
+   
+{% assign pinned = site.posts | where_exp: "item", "item.pin == true"  %}
+{% assign default = site.posts | where_exp: "item", "item.pin != true"  %}
+{% assign posts = "" | split: "" %}
+...
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-meta text-muted d-flex justify-content-between"</span><span class="nt">&gt;</span>
+   
+      <span class="nt">&lt;div&gt;</span>
+        <span class="c">&lt;!-- posted date --&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"far fa-calendar fa-fw"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        {% include timeago.html date=post.date tooltip=true %}
+   
+        <span class="c">&lt;!-- time to read --&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"far fa-clock fa-fw"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        {% include read-time.html content=post.content %}
+   
+        <span class="c">&lt;!-- page views --&gt;</span>
+        {% if site.google_analytics.pv.enabled %}
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"far fa-eye fa-fw"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"pv_{{-post.title-}}"</span> <span class="na">class=</span><span class="s">"pageviews"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-spinner fa-spin fa-fw"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        <span class="nt">&lt;/span&gt;</span>
+        {% endif %}
+      <span class="nt">&lt;/div&gt;</span>
+   
+      {% if post.pin %}
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-thumbtack fa-fw"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        <span class="nt">&lt;span&gt;</span>{{ site.data.label.pin_prompt | default: 'Pinned' }}<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      {% endif %}
+   
+    <span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- .post-meta --&gt;</span>
+   
+  <span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- .post-review --&gt;</span>
+   
+{% endfor %}
+   
+<span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- #post-list --&gt;</span>
+   
+{% if paginator.total_pages &gt; 0 %}
+  {% include post-paginator.html %}
+{% endif %}
+   
+</code></pre></div>    </div>
+
+    <p>实际上根目录下index.html运行后是home里面的代码内容，1中<strong>html代码段</strong>会填充的上图中的<strong>content</strong>位置。jekyll是将分散在各个目录下的html文件拼接起来运行。</p>
+  </li>
+  <li>
+    <p>上图的page布局也可以在_layouts目录下找到：</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+# The page layout
+---
+   
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-11 col-xl-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"page"</span> <span class="na">class=</span><span class="s">"post pb-5 pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 mb-md-4"</span><span class="nt">&gt;</span>
+    {% if page.dynamic_title %}
+      <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"dynamic-title"</span><span class="nt">&gt;</span>{{ page.title }}<span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-content"</span><span class="nt">&gt;</span>
+        {{ content }}
+      <span class="nt">&lt;/div&gt;</span>
+    {% else %}
+      {{ content }}
+    {% endif %}
+    <span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- #page --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- .col-12 --&gt;</span>
+   
+  {% include panel.html %}
+   
+<span class="nt">&lt;/div&gt;</span>
+   
+{% if site.disqus.comments and page.comments %}
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-11 col-xl-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"</span><span class="nt">&gt;</span>
+   
+    {% include disqus.html %}
+   
+    <span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- .pl-1 pr-1 --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- .col-12 --&gt;</span>
+<span class="nt">&lt;/div&gt;</span> <span class="c">&lt;!-- .row --&gt;</span>
+{% endif %}
+   
+</code></pre></div>    </div>
+
+    <p>关于Jekyll的更详细用法可以参考<a href="http://jekyllcn.com/docs/home/">官方网站</a></p>
+
+    <p>ps:</p>
+
+    <ul>
+      <li>
+        <p>GitHub Page 的（一种）输入是 markdown 文件，输出是 HTML/CSS/JS 文件。</p>
+      </li>
+      <li>
+        <p>如果 markdown 文件包含代码块，且代码块中包含花括号 { 或 }，尤其是包含 { % 或 { { 符号组合时，GitHub Page 会报错。</p>
+      </li>
+      <li>
+        <p>在代码前后添加{ % raw % }和{ % endraw % }（去掉符号间空格）</p>
+      </li>
+    </ul>
+  </li>
+</ol>
+:ET
