@@ -1,22 +1,26 @@
 ---
 title: Getting Started：使用Jekyll创建GitHub Pages站点搭建博客（Windows）
 author: Shi Daming
-date: 2019-03-01 17:00:00 +0800
+date: 2021-03-01 17:00:00 +0800
 categories: jekyll update
 tags: [getting started]
 pin: true
 ---
+**目录**
 
-- [一、必要组件的安装](#---------)
-- [二、网站托管（在Github上创建自己的repo）](#--------github------repo-)
-- [三、基于Jekyll模板建立网站](#----jekyll------)
-- [四、Jekyll目录结构](#--jekyll----)
+\- [一、必要组件的安装](#一必要组件的安装)
+
+\- [二、网站托管（在Github上创建自己的repo）](#二网站托管在github上创建自己的repo)
+
+\- [三、基于Jekyll模板建立网站](#三基于jekyll模板建立网站)
+
+\- [四、Jekyll目录结构](#四jekyll目录结构)
 
 ### 一、必要组件的安装
 
 需要首先安装以下内容
 
-- **Ruby** - 是一种面向对象、命令式、函数式、动态的通用编程语言。Windows下直接下载安装即可[Ruby installer](https://rubyinstaller.org/)。注意，如遇报错，可能需要将安装目录（xxx\Ruby27-x64\bin）加入系统环境变量PATH。
+- **Ruby** - [是一种面向对象]()、命令式、函数式、动态的通用编程语言。Windows下直接下载安装即可[Ruby installer](https://rubyinstaller.org/)。注意，如遇报错，可能需要将安装目录（xxx\Ruby27-x64\bin）加入系统环境变量PATH。
 
 - **Bundler** - 是一个官方推荐的Ruby gem包管理软件，可以减少Jekyll的编译错误，和环境依赖相关的bug，相关链接[Bundler](https://bundler.io/)。只需在终端中运行以下两步：
 
