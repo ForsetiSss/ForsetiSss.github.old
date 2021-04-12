@@ -2,10 +2,12 @@
 title: Getting Started：使用Jekyll创建GitHub Pages站点搭建博客（Windows）
 author: Shi Daming
 date: 2021-03-01 17:00:00 +0800
-categories: [Blogging, Tutorial]
+categories: jekyll update
 tags: [getting started]
 pin: true
 ---
+
+[TOC]
 
 ### 一、必要组件的安装
 
@@ -57,7 +59,7 @@ github.io是完全基于github创建的，其本质上是在你的github账户�
 
 3. 点击Download下载该模板至repo的本地目录，注意确保根目录下含有Gemfile这个文件。
 
-   <img src="/assets/img/QQ截图20210308194033.png"/>
+   <img src="/images/QQ截图20210308194033.png"/>
 
    注意插入图片时需要将图片文件放入assets文件夹，在md文件中由于路径不一致会无法正常显示，在网页中是正常的，无须担心。
 
