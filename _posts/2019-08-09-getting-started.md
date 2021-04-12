@@ -7,7 +7,10 @@ tags: [getting started]
 pin: true
 ---
 
-[TOC]
+- [一、必要组件的安装](#---------)
+- [二、网站托管（在Github上创建自己的repo）](#--------github------repo-)
+- [三、基于Jekyll模板建立网站](#----jekyll------)
+- [四、Jekyll目录结构](#--jekyll----)
 
 ### 一、必要组件的安装
 
