@@ -1,7 +1,7 @@
 ---
 title: Getting Started：使用Jekyll创建GitHub Pages站点搭建博客（Windows）
 author: Shi Daming
-date: 2021-03-01 17:00:00 +0800
+date: 2019-03-01 17:00:00 +0800
 categories: jekyll update
 tags: [getting started]
 pin: true
