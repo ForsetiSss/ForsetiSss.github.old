@@ -1,0 +1,14 @@
+vscode 安装插件Markdown All in One 插件并运行：F1
+Markdown All in One: Create Table of Contents
+
+Typora 正确插入图片（设定相对路径）
+
+1、格式-图像-设置图片根目录，选择github_page所在目录
+
+2、将图片复制到项目制定文件夹，如：
+
+```
+<img src="/images/BN_and_LN.png" style="zoom:80%;" />
+```
+
+该图片位于项目的images文件夹下。
