@@ -3,7 +3,7 @@ title: python中的lambda和map函数
 author: Shi Daming
 date: 2021-05-14 23:00:00 +0800
 categories: jekyll update
-tags: [python]
+tags: [python, lambda, map]
 pin: true
 ---
 

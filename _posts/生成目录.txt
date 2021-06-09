@@ -1,2 +1,2 @@
-vscode 安装插件Markdown All in One 插件并运行：
+vscode 安装插件Markdown All in One 插件并运行：F1
 Markdown All in One: Create Table of Contents
